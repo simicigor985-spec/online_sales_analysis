@@ -1,0 +1,22 @@
+from product import Product
+
+
+class ProductManager:
+    def __init__(self):
+        self.products = []
+
+    def add_product(self, product):
+        self.products.append(product)
+
+    def show_products(self):
+        if not self.products:
+            print("No products available.")
+        else:
+            for product in self.products:
+                print(
+                    f"Product Name: {product.name}, Price: ${product.price:.2f}, Quantity: {product.quantity}")
+
+    def total_inventory_value(self):
+        total_value = sum(
+            product.price * product.quantity for product in self.products)
+        return print(f"Total Inventory Value: ${total_value:.2f}")
