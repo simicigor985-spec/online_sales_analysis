@@ -5,6 +5,9 @@ class ProductManager:
     def __init__(self):
         self.products = []
 
+    def get_products(self):
+        return self.products
+
     def add_product(self, product):
         self.products.append(product)
 
